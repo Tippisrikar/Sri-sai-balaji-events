@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Navbar hover underline */
+button.relative::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #ec4899; /* Pink */
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+button.relative:hover::after {
+  width: 100%;
+}
+.active-nav::after {
+  width: 100%;
+}
+
+/* Contact Buttons */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
